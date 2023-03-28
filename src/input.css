@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html{
+  font-size: 62.5;
+  box-sizing: border-box;
+}
+
+.body{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main{
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  background-color: rgba(255,255,255,.35);
+  filter: blur();
+  box-shadow: 0 3rem 5rem (0,0,0, .25);
+  overflow:hidden;
+  display: flex;
+}
+
+.player{
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.name{
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+
+}
+.score{
+  font-size: 8rem;
+  font-weight: 100;
+  color: #d63131;
+  margin-bottom: auto;
+}
+
+.player--active{
+  background-color: rgba(0, 0, 0, .1) ;
+}
+
+.player--active .name{
+  font-weight: 300;
+}
+
+.player--active .score{
+  font-weight: 300;
+}
+
+.player--active .current{
+  opacity: 1;
+}
+
+.current{
+  background-color: #d63131;
+  padding: 1rem;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+.current-label{
+  color: #333;
+  margin-bottom: .5rem;
+}
+
+
+.dice{
+  position: absolute;
+  left: 50%;
+  top: 15rem;
+  transform: translate(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0,0,0,.2);
+}
+
+.btn{
+  position: absolute;
+  text-transform: uppercase;
+  left: 50%;
+  top:0;
+  transform: translate(-50%);
+}
+.btn::first-letter{
+  font-size: 1.5rem;
+}
+
+.btn--new{
+  top: 4rem;
+}
+
+
+.btn--roll{
+  top: 56rem;
+}
+.btn--hold{
+  top: 50rem;
+}
